@@ -14,7 +14,12 @@ module API
         bump_event.lonlat = RGeo::GeoJSON.decode(bump_event_params[:lonlat], json_parser: :json)
 
         if bump_event.save
-           render json: bump_event, status: 201, location: api_v1_bump_event_url(bump_event[:id])
+          (1..10).each do
+            sleep 1
+            bump_event.link_to_nearby_bumps
+          end
+          render json: bump_event.to_json(include: {matched_events: {only: [:id, :device_id]}}),
+            status: 201, location: api_v1_bump_event_url(bump_event[:id])
         end
 
       end

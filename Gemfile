@@ -30,6 +30,8 @@ gem 'activerecord-postgis-adapter'
 
 gem 'rgeo-geojson'
 
+gem 'puma'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

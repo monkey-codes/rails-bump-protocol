@@ -11,7 +11,7 @@ class BumpEventsTest < ActionDispatch::IntegrationTest
 
   test 'it creates bump events' do
     # curl -i -X POST -d 'bump_event[device_id]=12&bump_event[latitude:12.00]&bump'
-    # curl -H "Content-Type: application/json" -X POST -d '{"device_id":"123","lonlat":{"type":"Point", "coordinats":[-122.3989885,37.7905576]}}' http://localhost:3000/api/v1/bump_events
+    # curl -H "Content-Type: application/json" -X POST -d '{"device_id":"123","lonlat":{"type":"Point", "coordinates":[-122.3989885,37.7905576]}}' http://localhost:3000/api/v1/bump_events
     post '/api/v1/bump_events',
       { bump_event:
         {
