@@ -1,2 +1,2 @@
 # rails-bump-protocol
-Sample code for [Basic "bump" API using Rails](http://blog.monkey.codes/basic-bump-api-using-rails/).
+Sample code for [Basic "bump" API using Rails](https://johanzietsman.com/basic-bump-api-using-rails/).
